@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SolDreams | Build Your Dream Lifestyle</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Fixed Sidebar -->
+      <aside class="dream-sidebar">
+        <div class="sol-price-ticker">
+          <span class="sol-logo">◎</span>
+          <span id="sol-price">1 SOL = $0.00</span>
+        </div>
+
+        <div class="income-input">
+          <label for="daily-income">Your Daily SOL Income:</label>
+          <div class="input-group">
+            <input
+              type="number"
+              id="daily-income"
+              min="0"
+              step="0.01"
+              placeholder="Enter SOL/day"
+            />
+            <span>SOL/day</span>
+          </div>
+        </div>
+
+        <div class="dream-stats">
+          <h3>Your Dream Stats</h3>
+          <div class="total-amount">
+            <span class="usd-total">$0.00</span>
+            <span class="sol-total">◎0.00</span>
+          </div>
+          <div class="days-to-dream" id="days-counter">
+            Start adding items to your dream!
+          </div>
+        </div>
+
+        <div class="dream-cart">
+          <h3>Your Dream Cart</h3>
+          <div class="cart-items" id="cart-items">
+            <div class="empty-cart">Your dream is empty... for now</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="catalog-container">
+        <header class="catalog-header">
+          <div class="header-dream">
+            <h1>Build Your <span class="sol-gradient">SolDream</span></h1>
+            <a href="https://x.com" target="_blank">
+              <img src="./images/btnX.png" alt="Twitter" class="external-btn" />
+            </a>
+          </div>
+          <p>Select items to visualize your dream lifestyle in SOL</p>
+
+          <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="watches">Watches</button>
+            <button class="filter-btn" data-category="cars">Cars</button>
+            <button class="filter-btn" data-category="real-estate">
+              Real Estate
+            </button>
+            <button class="filter-btn" data-category="gadgets">Gadgets</button>
+            <button class="filter-btn" data-category="fashion">Fashion</button>
+          </div>
+        </header>
+
+        <div class="products-grid" id="products-grid"></div>
+      </main>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
